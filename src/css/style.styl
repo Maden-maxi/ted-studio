@@ -1,0 +1,41 @@
+@require 'setting/*'
+@require 'block/*'
+.wrapper{
+	overflow hidden
+}
+.intro
+	display flex
+	flex-flow column
+	justify-content center
+	align-items center
+	min-height 100vh
+	background transparent url(../img/bg.jpg) 0 0 no-repeat
+	background-size 100% 100%
+#services
+	display flex
+	flex-flow column
+	align-items center
+#about
+	@extend #services
+	background transparent url(../img/people.png) 0 0 no-repeat
+	background-size cover
+.about__text
+	max-width 1000px
+	margin auto auto 60px auto
+	padding 0 20px
+	color def-text-color
+	font 1rem regular,Arial,sans-serif
+	font-size responsive 1rem 1.5rem
+	text-align justify
+#reviews{
+	display flex
+	flex-flow column
+	align-items center
+	justify-content space-between
+	min-height 80vh
+}
+#feedback
+	display flex
+	flex-flow column
+	align-items center
+	background-color brand-color

@@ -1,0 +1,43 @@
+@lost flexbox flex
+.services
+	lost-center: 1000px
+	display flex
+	flex-flow row wrap
+	margin 20px 0
+.service
+	flex-basis 240px
+	display flex
+	flex-flow column
+	margin auto
+	margin-bottom 40px
+	&__icon
+		width 100px
+		height 100px
+		margin 0 auto
+		border-radius 50px
+		border 2px solid brand-color
+		transition all .5s
+		&:hover
+			border-color second-color
+		&_site
+			background transparent url(../img/service_icons.png) 13px 13px no-repeat
+		&_design
+			background transparent url(../img/service_icons.png) 13px -62px no-repeat
+		&_logos
+			background transparent url(../img/service_icons.png) 13px -140px no-repeat
+		&_banners
+			background transparent url(../img/service_icons.png) 13px -222px no-repeat
+		&_business-card
+			background transparent url(../img/service_icons.png) 13px -305px no-repeat
+		&_maintain
+			background transparent url(../img/service_icons.png) 14px -385px no-repeat
+		&_host
+			background transparent url(../img/service_icons.png) 14px -465px no-repeat
+		&_drink
+			background transparent url(../img/service_icons.png) 14px -543px no-repeat
+	&__title
+		font 1.125rem regular,Arial,sans-serif
+		@extend .txt-transform
+		color title-color
+		text-align center
+		margin 20px 0

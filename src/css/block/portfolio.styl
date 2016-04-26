@@ -1,0 +1,59 @@
+@keyframes fadeIn 
+	from
+		display block
+		opacity 0
+		transform scale(1.5)
+	to
+		opacity 1
+		transform scale(1)
+		display block
+		  
+#portfolio
+	display flex
+	flex-flow column
+	align-items center
+	min-height 100vh
+.portfolio
+	max-width 1000px
+	width 100%
+	margin 20px auto
+.tabs
+	&__controls
+		display flex
+		justify-content center
+		&-item
+			margin 20px
+			color brand-color
+			cursor pointer
+			text-transform uppercase
+			transition all .5s
+			font 1.25rem regular,Arial,sans-serif
+			&:hover,&.active
+				color second-color
+			&:first-child
+				margin-left 0
+	&__list
+		//position relative
+		padding 40px
+	&__item
+		list-style-type none
+		display none
+		
+		img
+			height 200px
+			border 2px solid brand-color
+			transition all .5s
+			&:hover
+				border 2px solid second-color
+		&.active
+			animation fadeIn .5s ease-in 0s 1 forwards
+			display block
+.bx
+	&-wrapper
+		box-shadow none
+	&-pager-item
+		visibility hidden
+	&-prev
+		left -42px !important
+	&-next
+		right -42px !important

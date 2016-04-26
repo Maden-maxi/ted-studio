@@ -1,0 +1,4 @@
+#gulp plugins
+builder/node_modules
+#bower components
+build/bower_components

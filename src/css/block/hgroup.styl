@@ -1,0 +1,20 @@
+.hgroup
+	margin auto auto 0
+	display flex
+	flex-flow column
+	justify-content center
+	align-items center
+	&__title
+		font 3rem bold,Arial,sans-serif
+		font-size responsive 1.5rem 3rem
+		margin-bottom 20px
+		color def-text-color
+		@extend .txt-transform
+		&:first-letter
+			color second-color
+	&__subtitle
+		font 2.250rem regular,Arial,sans-serif
+		font-size responsive 1.2rem 2.250rem
+		margin-bottom 20px
+		color def-text-color
+		@extend .txt-transform

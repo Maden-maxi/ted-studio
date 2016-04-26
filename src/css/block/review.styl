@@ -1,0 +1,82 @@
+.reviews
+	max-width 1000px
+	display flex
+	flex-flow row wrap
+	justify-content center
+	align-items center
+.review
+	&__wrapper
+		min-width 200px
+		min-height 200px
+		display flex
+		justify-content center
+		align-items center
+	margin 50px
+	background #f0f
+	width 100px
+	height 100px
+	border 2px solid brand-color
+	border-radius 50px
+	position relative
+	&__tooltip
+		background brand-color
+		padding 20px
+	&__title
+		font 1.875rem Arial,sans-serif
+		font-size responsive 0.875rem 1.875rem
+		color def-text-color
+	&__text
+		font 1.5rem Arial,sans-serif
+		font-size responsive 1rem 1.5rem
+		color def-text-color
+	&:hover
+		border-color second-color
+		
+	& > &__tooltip
+		width 48.5vw
+		height 200px
+		padding 10px 20px
+		position relative
+		top -214px
+		opacity 0
+		visibility hidden
+		//z-index 10
+		transition all 0.4s ease-in
+		color #000
+		box-shadow 1px 1px 10px #000
+		@media screen and (max-width: 786px)
+			width 200px
+			height 200px
+	&:hover > &__tooltip
+		opacity 1
+		visibility visible
+		overflow visible
+		display inline-block
+		margin-left 0px
+		position relative
+		top -214px
+	&_tooltip-2
+		left -200px
+		.review__triangle
+			left 220px
+	&_tooltip-3
+		left -400px
+		.review__triangle
+			left 420px
+	&_tooltip-4
+		left -400px
+		.review__triangle
+			left 420px				
+	&__triangle
+		width 15px
+		height 15px
+		margin-left 21px
+		margin-top 182px
+		z-index -1
+		display block
+		position absolute
+		transform rotate(135deg)
+		box-shadow inset 0 1px 0 brand-color
+		border-top 1px solid brand-color
+		border-right 1px solid brand-color
+		background-color brand-color

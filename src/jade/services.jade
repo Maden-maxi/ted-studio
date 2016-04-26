@@ -1,0 +1,15 @@
+mixin service(title,icoName)
+		.service
+			.service__icon(class=icoName)
+			.service__title!= title
+#services
+	h3.title.wow.flipInX Нашы услуги
+	.services.wow.fadeIn(data-wow-delay='0.5s' data-wow-duration='1s')
+		+service('Разработка<br /> сайтов','service__icon_site')
+		+service('Разработка<br /> дизайна','service__icon_design')
+		+service('Создание<br /> логотипов','service__icon_logos')
+		+service('Создание<br /> баннеров','service__icon_banners')
+		+service('Создание<br /> визиток','service__icon_business-card')
+		+service('Поддержка<br /> сайта','service__icon_maintain')
+		+service('Установка домена и хостинга','service__icon_host')
+		+service('Бухнуть<br /> с разработчиком	','service__icon_drink')

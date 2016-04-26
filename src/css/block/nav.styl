@@ -1,0 +1,19 @@
+.nav
+	margin auto auto 0
+	display flex
+	flex-wrap wrap
+	align-items center
+	@media screen and (max-width: 520px)
+		flex-direction column
+		height auto
+	height 60px
+	&__link
+		display block
+		margin 0 10px
+		font 1.125rem regular,Arial,sans-serif
+		text-decoration none
+		@extend .txt-transform
+		color def-text-color
+		transition all 0.5s
+		&:hover
+			color second-color
