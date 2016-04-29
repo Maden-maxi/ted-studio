@@ -231,6 +231,15 @@ button {
   font: 1.5em 'SourceSansProRegular', Arial, sans-serif;
   padding: 10px 50px;
 }
+.footer {
+  background-color: #3b5362;
+  padding: 20px;
+}
+.copyright {
+  color: #fff;
+  font: 16px 'SourceSansProRegular', Arial, sans-serif;
+  font: 1rem 'SourceSansProRegular', Arial, sans-serif;
+}
 .form {
   display: -webkit-box;
   display: -webkit-flex;
