@@ -3,6 +3,7 @@ var gulp = require('gulp'),
 	gulpJade = require('gulp-jade'),
 	katex = require('katex'),// jade end
 	stylus = require('gulp-stylus'),
+  nib = require('nib'),
 	postcss = require('gulp-postcss'),//postcss begin
 	cssnext = require('cssnext'),
 	rucksack = require('rucksack-css'),
@@ -15,6 +16,7 @@ gulp.task('styles',function () {
         lost,
     ];
     return gulp.src('../src/css/style.styl')
+        //.pipe(stylus({use:[nib()]}))
         .pipe(stylus())
         .pipe(postcss(processors))
         .pipe(gulp.dest('../src/css/'));

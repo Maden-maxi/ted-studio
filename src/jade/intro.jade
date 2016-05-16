@@ -1,11 +1,9 @@
+-var nav = {services: 'Услуги', about: 'О нас', portfolio: 'Портфолио', advantages: 'Приемущества', reviews: 'Отзывы'}
 .intro
 	hgroup(data-wow-duration='1s').hgroup.wow.fadeInDown
 		h1.hgroup__title Ted - studio
 		h2.hgroup__subtitle Ми увеличим вашы продажи
 	a(href="#feedback" data-wow-delay='0.5s' data-wow-duration="1s").btn.wow.zoomIn Заказать
 	nav(data-wow-duration='1s' data-wow-delay='1s').nav.wow.fadeIn
-		a.nav__link(href="#services") Услуги 
-		a.nav__link(href="#about") О нас
-		a.nav__link(href="#portfolio") Портфолио
-		a.nav__link(href="#advantages") Приемущества
-		a.nav__link(href="#reviews") Отзывы
+		each linkName,linkPath in nav
+			a.nav__link(href='#'+linkPath) #{linkName}

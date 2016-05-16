@@ -17,6 +17,7 @@
     "gulp-wiredep": "0.0.0",
     "gulp-clean-css": "~2.0.6",
     "gulp-useref": "~3.0.8",
-    "gulp-if": "~2.0.0"
+    "gulp-if": "~2.0.0",
+    "nib": "~1.1.0"
   }
 }
