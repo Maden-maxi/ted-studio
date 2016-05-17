@@ -819,9 +819,6 @@ button {
   color: #fff;
   border: none;
 }
-.wrapper {
-  overflow: hidden;
-}
 .intro {
   display: -webkit-box;
   display: -webkit-flex;
