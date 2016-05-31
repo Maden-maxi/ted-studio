@@ -8,6 +8,7 @@
     "bxslider-4": "bxSlider#^4.2.5",
     "photoswipe": "^4.1.1",
     "jquery.inputmask": "2.5.0",
-    "jquery-ui": "^1.11.4"
+    "jquery-ui": "^1.11.4",
+    "tooltipster": "^3.3.0"
   }
 }

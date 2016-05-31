@@ -63,7 +63,7 @@ var imagemin = require('gulp-imagemin');
 gulp.task('compress', function() {
   gulp.src('../src/img/**')
   .pipe(imagemin())
-  .pipe(gulp.dest('../build/img'))
+  .pipe(gulp.dest('../build/img'));
 });
 //bower
 var wiredep = require('gulp-wiredep');
