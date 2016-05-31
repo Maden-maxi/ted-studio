@@ -3,11 +3,11 @@
 - var member2 = new Member('member2', 'Роман Лепёхин', '2.jpg', 'Директор ООО "Спектр"', 'bg_2.jpg', 'Было очень легко работать с Вами. Сайт получился именно такой как мы его задумывали. Благодарим за Ваше участие и подсказки в оформлении и наполнении сайта информацией. Нравится Ваш подход к делу, быстрая реакция на наши вопросы, и корректировки возникшие в работе над сайтом. В дальнейшем планируем пользоваться Вашими услугами и рекомендовать Вас своим друзьям и деловым партнерам. Всяческого Вам процветания и благ.');
 - var member3 = new Member('member3', 'Юлия Калачёва', '3.jpg', 'Менеджер SPA-центра Золотая Жемчужина', 'bg_3.jpg', 'Мы хотели бы поблагодарить участников разработки сайта "Золотой Жемчуг" за удачный проект. Нам очень понравился дизайн сайта и его функциональность. Все наши постоянные клиенты оценили новый сайт на пять. Ну и конечно спасибо разработчикам за терпение и такт, так как мы наверное были капризными заказчиками, слишком требовательными и меняли много раз содержимое и дизайн. Но результат мы оцениваем на Отлично!!! Еще раз спасибо всему коллективу и надеемся на дальнейшее сотрудничество.');
 
-mixin review(dataType, img, name, profession)
-	li
+mixin review(dataType, img, name, profession, delay)
+	li.wow.flipInY(data-wow-delay="#{delay}s", data-wow-duration="1.5s")
 		a(data-type="#{dataType}")
 			figure
-				img(src="img/reviews/#{img}", alt="Team #{dataType}")
+				img(src="img/reviews/#{img}", alt="#{name}: #{profession}")
 				.cd-img-overlay
 					span Посмотреть отзыв
 			.cd-member-info= name
@@ -21,14 +21,14 @@ mixin reviewCard(dataType, bg, name, review)
 			p= review
 #reviews
 	.title.wow.flipInX(data-wow-delay='0.5s') Отзывы о нас
-	.reviews.wow.slideInDown(data-wow-delay='1s')
+	.reviews
 		main
 			#cd-team.cd-section
 				.cd-container
 					ul
-						+review(member1.dataType, member1.avatar, member1.name, member1.profession)
-						+review(member2.dataType, member2.avatar, member2.name, member2.profession)
-						+review(member3.dataType, member3.avatar, member3.name, member3.profession)
+						+review(member1.dataType, member1.avatar, member1.name, member1.profession, 0.3)
+						+review(member2.dataType, member2.avatar, member2.name, member2.profession, 0.6)
+						+review(member3.dataType, member3.avatar, member3.name, member3.profession, 0.9)
 			.cd-overlay
 		+reviewCard(member1.dataType, member1.background, member1.name, member1.review)
 		+reviewCard(member2.dataType, member2.background, member2.name, member2.review)

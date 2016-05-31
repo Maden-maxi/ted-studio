@@ -275,12 +275,12 @@ var initPhotoSwipeFromDOM = function(gallerySelector) {
 // execute above function
 initPhotoSwipeFromDOM('.my-gallery');
 //ajax
-    function call(currentForm){
+    function sendData(currentForm){
       console.log(currentForm);
       var form_data = $(currentForm).serialize();
        $.ajax({
         type: "POST",
-        url: "send/form.php",
+        url: "inc/mail.php",
         data: form_data,
         success: function () {
             $(".feedback__success").fadeIn('400');
@@ -294,7 +294,6 @@ initPhotoSwipeFromDOM('.my-gallery');
            setTimeout(function () {
                 $(".feedback__error").fadeOut('400');
             }, 3000);
-           alert("error");
          } 
        });
      }

@@ -169,23 +169,23 @@
       </div>
       <div id="reviews">
         <div data-wow-delay="0.5s" class="title wow flipInX">Отзывы о нас</div>
-        <div data-wow-delay="1s" class="reviews wow slideInDown">
+        <div class="reviews">
           <main>
             <div id="cd-team" class="cd-section">
               <div class="cd-container">
                 <ul>
-                        <li><a data-type="member1">
-                            <figure><img src="img/reviews/1.jpg" alt="Team member1">
+                        <li data-wow-delay="0.3s" data-wow-duration="1.5s" class="wow flipInY"><a data-type="member1">
+                            <figure><img src="img/reviews/1.jpg" alt="Андрей Гончар: DJ Undercover">
                               <div class="cd-img-overlay"><span>Посмотреть отзыв</span></div>
                             </figure>
                             <div class="cd-member-info">Андрей Гончар<span>DJ Undercover</span></div></a></li>
-                        <li><a data-type="member2">
-                            <figure><img src="img/reviews/2.jpg" alt="Team member2">
+                        <li data-wow-delay="0.6s" data-wow-duration="1.5s" class="wow flipInY"><a data-type="member2">
+                            <figure><img src="img/reviews/2.jpg" alt="Роман Лепёхин: Директор ООО &quot;Спектр&quot;">
                               <div class="cd-img-overlay"><span>Посмотреть отзыв</span></div>
                             </figure>
                             <div class="cd-member-info">Роман Лепёхин<span>Директор ООО &quot;Спектр&quot;</span></div></a></li>
-                        <li><a data-type="member3">
-                            <figure><img src="img/reviews/3.jpg" alt="Team member3">
+                        <li data-wow-delay="0.9s" data-wow-duration="1.5s" class="wow flipInY"><a data-type="member3">
+                            <figure><img src="img/reviews/3.jpg" alt="Юлия Калачёва: Менеджер SPA-центра Золотая Жемчужина">
                               <div class="cd-img-overlay"><span>Посмотреть отзыв</span></div>
                             </figure>
                             <div class="cd-member-info">Юлия Калачёва<span>Менеджер SPA-центра Золотая Жемчужина</span></div></a></li>
@@ -220,7 +220,7 @@
       </div>
       <div id="feedback">
         <div class="title title_feedback wow flipInX">Связатся с нами</div>
-        <form action="javascript:void(null)" method="POST" name="feedback" onsubmit="call(this)" class="form">
+        <form action="javascript:void(null)" method="POST" name="feedback" onsubmit="sendData(this)" class="form">
           <input data-wow-delay="0.5s" type="text" name="name" placeholder="Имя" required class="input wow fadeInLeft">
           <input id="phone" data-inputmask="'mask': '9', 'repeat': 10, 'greedy' : false" data-wow-delay="0.7s" type="tel" name="phone" placeholder="Телефон" required class="input wow fadeInRight">
           <input data-wow-delay="0.9s" type="email" name="email" placeholder="E-mail" class="input wow fadeInLeft">
