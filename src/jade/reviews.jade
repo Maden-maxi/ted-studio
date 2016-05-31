@@ -1,16 +1,36 @@
-mixin review(title, text, n)
-	.review__wrapper
-		.review
-			.review__tooltip(class=n)
-				b.review__triangle
-				.review__title= title
-				.review__text= text
+- function Member(dataType, name, avatar, profession, background, review){this.dataType = dataType;this.name = name;this.avatar = avatar;this.profession = profession;this.background = background;this.review = review;};
+- var member1 = new Member('member1', 'Андрей Гончар', '1.jpg', 'DJ Undercover', 'bg_1.jpg', 'review number one');
+- var member2 = new Member('member2', 'Роман Лепёхин', '2.jpg', 'Директор ООО "Спектр"', 'bg_2.jpg', 'review number two');
+- var member3 = new Member('member3', 'Юлия Калачёва', '3.jpg', 'Менеджер SPA-центра Жемчужина', 'bg_3.jpg', 'review number three');
+
+mixin review(dataType, img, name, profession)
+	li
+		a(data-type="#{dataType}")
+			figure
+				img(src="img/reviews/#{img}", alt="Team #{dataType}")
+				.cd-img-overlay
+					span Посмотреть отзыв
+			.cd-member-info= name
+				span= profession
+mixin reviewCard(dataType, bg, name, review)
+	div(class='cd-member-bio #{dataType}')
+		.cd-member-bio-pict
+			img(src="img/reviews/#{bg}", alt="#{name}")
+		.cd-bio-content
+			h1= name
+			p= review
 #reviews
 	.title.wow.flipInX(data-wow-delay='0.5s') Отзывы о нас
 	.reviews.wow.slideInDown(data-wow-delay='1s')
-		+review('Никита','Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam, cupiditate.', 'review_tooltip-1')
-		+review('Вера','Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam, cupiditate.', 'review_tooltip-2')
-		+review('Вася','Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam, cupiditate.', 'review_tooltip-3')
-		+review('Анджела','Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam, cupiditate.', 'review_tooltip-4')
-
-
+		main
+			#cd-team.cd-section
+				.cd-container
+					ul
+						+review(member1.dataType, member1.avatar, member1.name, member1.profession)
+						+review(member2.dataType, member2.avatar, member2.name, member2.profession)
+						+review(member3.dataType, member3.avatar, member3.name, member3.profession)
+			.cd-overlay
+		+reviewCard(member1.dataType, member1.background, member1.name, member1.review)
+		+reviewCard(member2.dataType, member2.background, member2.name, member2.review)
+		+reviewCard(member3.dataType, member3.background, member3.name, member3.review)
+		.cd-member-bio-close
