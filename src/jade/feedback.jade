@@ -1,10 +1,12 @@
 #feedback
 	.title.title_feedback.wow.flipInX Связатся с нами
-	form(action="" method="POST" name="feedback").form
-		input.input.wow.fadeInLeft(data-wow-delay='0.5s' type="text" name="name" placeholder="Имя" required)
-		input#phone.input.wow.fadeInRight(data-inputmask="'mask': '9', 'repeat': 10, 'greedy' : false" data-wow-delay='0.7s' type="tel" name="phone" placeholder="Телефон" required)
-		input.input.wow.fadeInLeft(data-wow-delay='0.9s' type="email" name="email" placeholder="E-mail")
-		textarea.input.input_message.wow.fadeInRight(data-wow-delay='1s' name="message", cols="30", rows="5" placeholder="Введите сообщение")
+	form.form(action="javascript:void(null)", method="POST", name="feedback", onsubmit="call(this)")
+		input.input.wow.fadeInLeft(data-wow-delay='0.5s', type="text", name="name", placeholder="Имя", required)
+		input#phone.input.wow.fadeInRight(data-inputmask="'mask': '9', 'repeat': 10, 'greedy' : false", data-wow-delay='0.7s', type="tel", name="phone", placeholder="Телефон", required)
+		input.input.wow.fadeInLeft(data-wow-delay='0.9s', type="email", name="email", placeholder="E-mail")
+		textarea.input.input_message.wow.fadeInRight(data-wow-delay='1s', name="message", cols="30", rows="5", placeholder="Введите сообщение")
 		.form__footer
-			button.btn.btn__feedback.wow.fadeInLeft(data-wow-delay='1.2s' type="submit") Отправить
+			button.btn.btn__feedback.wow.fadeInLeft(data-wow-delay='1.2s', type="submit") Отправить
 			span.phone.wow.fadeInRight(data-wow-delay='1.2s') +380952548618
+	.feedback__success Вашы данные успешно отправлено 
+	.feedback__error Произошла ошибка при отправлении!

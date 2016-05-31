@@ -19,3 +19,21 @@
 .phone
 	color def-text-color
 	font 1.5em regular,Arial,sans-serif
+.notify
+	display none
+	position fixed
+	width 50vw
+	top 50%
+	left calc(50% - 25vw)
+	padding 20px
+	text-align center
+	color #fff
+	font 2rem bold,sans-serif
+	border-radius 10px
+.feedback
+	&__success
+		background-color #4DCD49
+		@extends .notify
+	&__error
+		background-color #F42525
+		@extends .notify

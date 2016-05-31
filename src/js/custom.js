@@ -269,7 +269,32 @@ var initPhotoSwipeFromDOM = function(gallerySelector) {
             $('body').removeClass('overflow-hidden');
         }
     });
+    
 };
 
 // execute above function
 initPhotoSwipeFromDOM('.my-gallery');
+//ajax
+    function call(currentForm){
+      console.log(currentForm);
+      var form_data = $(currentForm).serialize();
+       $.ajax({
+        type: "POST",
+        url: "send/form.php",
+        data: form_data,
+        success: function () {
+            $(".feedback__success").fadeIn('400');
+            setTimeout(function () {
+                $(".feedback__success").fadeOut('400');
+            }, 3000);
+            $("form").trigger("reset");  
+        },
+        error: function(xhr, str) {
+           $(".feedback__error").fadeIn('400');
+           setTimeout(function () {
+                $(".feedback__error").fadeOut('400');
+            }, 3000);
+           alert("error");
+         } 
+       });
+     }

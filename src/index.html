@@ -188,7 +188,7 @@
                             <figure><img src="img/reviews/3.jpg" alt="Team member3">
                               <div class="cd-img-overlay"><span>Посмотреть отзыв</span></div>
                             </figure>
-                            <div class="cd-member-info">Юлия Калачёва<span>Менеджер SPA-центра Жемчужина</span></div></a></li>
+                            <div class="cd-member-info">Юлия Калачёва<span>Менеджер SPA-центра Золотая Жемчужина</span></div></a></li>
                 </ul>
               </div>
             </div>
@@ -198,21 +198,21 @@
                   <div class="cd-member-bio-pict"><img src="img/reviews/bg_1.jpg" alt="Андрей Гончар"></div>
                   <div class="cd-bio-content">
                     <h1>Андрей Гончар</h1>
-                    <p>review number one</p>
+                    <p>Хочу порекомендавать веб-студию TED всем, у кого в планах создание собственного интернет-ресурса. Обратился к студии в июне этого года с вопросом о создании сайта. Работа выполнена на отлично. Недорого, строго в указанные в договоре сроки, качественно, без единого замечания. В любое время есть возможность созвониться, внести поправки в процессе создания сайта. Всегда можно обратиться с вопросом, как во время выполнения работы, так и после подписания акта приёма-передачи. Ни одно сообщение на электронный адрес студии не осталось без ответа, ни один звонок не был пропущен. Очень ответственные, порядочные, приятные в общении профессионалы своего дела! Крайне рекомендую!</p>
                   </div>
                 </div>
                 <div class="cd-member-bio member2">
                   <div class="cd-member-bio-pict"><img src="img/reviews/bg_2.jpg" alt="Роман Лепёхин"></div>
                   <div class="cd-bio-content">
                     <h1>Роман Лепёхин</h1>
-                    <p>review number two</p>
+                    <p>Было очень легко работать с Вами. Сайт получился именно такой как мы его задумывали. Благодарим за Ваше участие и подсказки в оформлении и наполнении сайта информацией. Нравится Ваш подход к делу, быстрая реакция на наши вопросы, и корректировки возникшие в работе над сайтом. В дальнейшем планируем пользоваться Вашими услугами и рекомендовать Вас своим друзьям и деловым партнерам. Всяческого Вам процветания и благ.</p>
                   </div>
                 </div>
                 <div class="cd-member-bio member3">
                   <div class="cd-member-bio-pict"><img src="img/reviews/bg_3.jpg" alt="Юлия Калачёва"></div>
                   <div class="cd-bio-content">
                     <h1>Юлия Калачёва</h1>
-                    <p>review number three</p>
+                    <p>Мы хотели бы поблагодарить участников разработки сайта &quot;Золотой Жемчуг&quot; за удачный проект. Нам очень понравился дизайн сайта и его функциональность. Все наши постоянные клиенты оценили новый сайт на пять. Ну и конечно спасибо разработчикам за терпение и такт, так как мы наверное были капризными заказчиками, слишком требовательными и меняли много раз содержимое и дизайн. Но результат мы оцениваем на Отлично!!! Еще раз спасибо всему коллективу и надеемся на дальнейшее сотрудничество.</p>
                   </div>
                 </div>
           <div class="cd-member-bio-close"></div>
@@ -220,7 +220,7 @@
       </div>
       <div id="feedback">
         <div class="title title_feedback wow flipInX">Связатся с нами</div>
-        <form action="" method="POST" name="feedback" class="form">
+        <form action="javascript:void(null)" method="POST" name="feedback" onsubmit="call(this)" class="form">
           <input data-wow-delay="0.5s" type="text" name="name" placeholder="Имя" required class="input wow fadeInLeft">
           <input id="phone" data-inputmask="'mask': '9', 'repeat': 10, 'greedy' : false" data-wow-delay="0.7s" type="tel" name="phone" placeholder="Телефон" required class="input wow fadeInRight">
           <input data-wow-delay="0.9s" type="email" name="email" placeholder="E-mail" class="input wow fadeInLeft">
@@ -229,6 +229,8 @@
             <button data-wow-delay="1.2s" type="submit" class="btn btn__feedback wow fadeInLeft">Отправить</button><span data-wow-delay="1.2s" class="phone wow fadeInRight">+380952548618</span>
           </div>
         </form>
+        <div class="feedback__success">Вашы данные успешно отправлено </div>
+        <div class="feedback__error">Произошла ошибка при отправлении!</div>
       </div>
       <footer class="footer">
         <p class="copyright">TED - STUDIO. &copy; 2016</p>

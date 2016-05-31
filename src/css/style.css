@@ -281,6 +281,27 @@ button {
   color: #fff;
   font: 1.5em 'SourceSansProRegular', Arial, sans-serif;
 }
+.notify,
+.feedback__success,
+.feedback__error {
+  display: none;
+  position: fixed;
+  width: 50vw;
+  top: 50%;
+  left: calc(50% - 25vw);
+  padding: 20px;
+  text-align: center;
+  color: #fff;
+  font: 32px 'SourceSansProBold', sans-serif;
+  font: 2rem 'SourceSansProBold', sans-serif;
+  border-radius: 10px;
+}
+.feedback__success {
+  background-color: #4dcd49;
+}
+.feedback__error {
+  background-color: #f42525;
+}
 .hgroup {
   margin: auto auto 0;
   display: -webkit-box;
@@ -667,18 +688,14 @@ main.slide-out .cd-overlay {
 .cd-placeholder-2 {
   background: #fff;
 }
-.no-touch #cd-team li:hover {
+#cd-team li:hover {
   box-shadow: 0 0 10px rgba(92,75,81,0.3);
 }
-.no-touch #cd-team li:hover .cd-img-overlay {
+#cd-team li:hover .cd-img-overlay {
   opacity: 1;
 }
 #cd-team {
   background: transparent;
-img
-  display: block;
-  width: 100%;
-  border-radius: 0.25em 0.25em 0 0;
 }
 #cd-team .cd-container {
   max-width: 1200px;
@@ -698,6 +715,11 @@ img
 }
 #cd-team figure {
   position: relative;
+}
+#cd-team figure img {
+  display: block;
+  width: 100%;
+  border-radius: 0.25em 0.25em 0 0;
 }
 #cd-team .cd-img-overlay {
   position: absolute;
